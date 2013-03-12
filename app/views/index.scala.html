@@ -1,0 +1,29 @@
+@(posts: List[Post])
+
+@main("Post database") {
+  <h2>Insert a Post here:</h2>
+
+  <form action="/insert" method="POST">
+    <input name="title" type="text" placeholder="the title"/>
+    <input name="author" type="text" placeholder="the author"/>
+    <input name="content" type="text" placeholder="the content"/>
+    <input type="submit"/>
+  </form>
+
+  <h2>Previously inserted posts:</h2>
+  <table>
+    <tr>
+        <th>title</th>
+        <th>author</th>
+        <th>content</th>
+    </tr>
+    @for(c <- posts){
+    <tr>
+        <td>@c.title</td>
+        <td>@c.author</td>
+        <td>@c.content</td>
+    </tr>
+    }
+  <table/>
+
+}

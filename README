@@ -1,6 +1,4 @@
-This is your new Play 2.1 application
+Sherpa
 =====================================
 
-This file will be packaged with your application, when using `play dist`.
-
-This file was modified by IntelliJ IDEA 12.0.4 for binding GitHub repository
+A blog made with Scala
